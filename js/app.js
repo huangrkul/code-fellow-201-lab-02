@@ -19,8 +19,14 @@ function init() {
   scoreResult = document.getElementById("scoreResult");
   scoreDesc = document.getElementById("scoreDesc");
 
-  usr = prompt('Hello! What is your name?'); 
-  userName.innerText = usr.toUpperCase();
+  usr = prompt('Hello! What is your name?');
+
+  if(usr == null) {
+    userName.innerText = 'USER';
+  } else {
+    userName.innerText = usr.toUpperCase();
+  }
+  
 
   pqMatch = confirm('Would you like to play a quick personality match game?');
 
