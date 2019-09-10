@@ -37,6 +37,10 @@ function init() {
   }
 }
 
+function alertTxt() {
+  alert('You answered correctly! By that, I mean you followed the instruction in the prompt, well done!')
+}
+
 function initPqWeb() {
   pqWeb = prompt('Do you love web development? (y/n) or (yes/no)');
   pqWeb.toLowerCase();
@@ -45,6 +49,7 @@ function initPqWeb() {
     if(pqWeb === 'yes' || pqWeb === 'y'){
       score = score + 1;
     } 
+    alertTxt();
     initPqGamer();
     console.log('Do you love web development? You answered ' + pqWeb.toUpperCase());
   } else {
@@ -61,7 +66,8 @@ function initPqGamer() {
   if(pqGamer === 'yes' || pqGamer === 'y' || pqGamer === 'no' || pqGamer === 'n'){
     if(pqGamer === 'yes' || pqGamer === 'y'){
       score = score + 1;
-    } 
+    }
+    alertTxt(); 
     initPqOutdoor();
     console.log('Are you a gamer? You answered ' + pqGamer.toUpperCase());
   } else {
@@ -78,7 +84,8 @@ function initPqOutdoor() {
   if(pqOutdoor === 'yes' || pqOutdoor === 'y' || pqOutdoor === 'no' || pqOutdoor === 'n'){
     if(pqOutdoor === 'no' || pqOutdoor === 'n'){
       score = score + 1;
-    } 
+    }
+    alertTxt();
     initPqPokemon();
     console.log('Do you hate outdoor activities? You answered ' + pqOutdoor.toUpperCase());
   } else {
@@ -96,6 +103,7 @@ function initPqPokemon() {
     if(pqPokemon === 'yes' || pqPokemon === 'y'){
       score = score + 1;
     } 
+    alertTxt();
     initPqIntrovert();
     console.log('Do you play Pokemon Go? You answered ' + pqPokemon.toUpperCase());
   } else {
@@ -113,12 +121,13 @@ function initPqIntrovert() {
     if(pqIntrovert === 'yes' || pqIntrovert === 'y'){
       score = score + 1;
     } 
+    alertTxt();
     result();
     console.log('Do you play Pokemon Go? You answered ' + pqIntrovert.toUpperCase());
   } else {
     alert('Sorry, but that is not a proper answer.  Please try again.')
     console.log('Sorry, but that is not a proper answer.  Please read it again.');
-    initpqPokemon();
+    initpqIntrovert();
   }
 }
 
