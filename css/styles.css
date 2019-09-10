@@ -8,7 +8,6 @@ main {
 }
 
 article {
-  width: 80%;
   display: inline-block;
   border: 1px solid black;
 }
@@ -26,6 +25,10 @@ article {
   font-weight: bold;
 }
 
+.user-name {
+  color: #153c7a;
+}
+
 .bio-section {
   text-align: left;
   margin: 4em;
@@ -37,6 +40,29 @@ article {
   padding: 2em;
 }
 
-.user-name {
-  color: blue;
+.promptResult {
+  padding: 2em;
+  margin-top: -2em;
+}
+
+#scoreResult {
+  font-size: 10em;
+  font-weight: bold;
+  color: orange;
+}
+
+
+@media (min-width: 601px) {
+  article {
+    width: 80%;
+  }
+  .wel-user {
+    padding: 1em;
+  }
+}
+
+@media (max-width: 600px) {
+  article {
+    width: 95%;
+  }
 }
