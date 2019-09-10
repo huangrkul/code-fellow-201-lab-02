@@ -1,7 +1,12 @@
 'use strict';
+
+//all variables declared here.  Values will be added after init().
+
+//user name variables
 var usr;
 var userName;
 
+//pq = prompt question.  Mini game variables
 var pqMatch;
 var pqWeb;
 var pqGamer;
@@ -9,27 +14,29 @@ var pqOutdoor;
 var pqPokemon;
 var pqIntrovert;
 
+//score variables
 var scoreResult;
 var scoreDesc;
 var score = 0;
 var maxScore = 5;
 
 function init() {
+  //this ensures everything in body is loaded before giving value to variables.
   userName = document.getElementById('userName');
   scoreResult = document.getElementById("scoreResult");
   scoreDesc = document.getElementById("scoreDesc");
 
   usr = prompt('Hello! What is your name?');
 
+  //if no name is given, default to USER.
   if(usr == null) {
     userName.innerText = 'USER';
   } else {
     userName.innerText = usr.toUpperCase();
   }
   
-
+  //mini game prompt
   pqMatch = confirm('Would you like to play a quick personality match game?');
-
   if(pqMatch){
     initPqWeb();
   } else {
@@ -37,10 +44,12 @@ function init() {
   }
 }
 
+//alert for when user input correctly.
 function alertTxt() {
   alert('You answered correctly! By that, I mean you followed the instruction in the prompt, well done!')
 }
 
+//first question in mini game
 function initPqWeb() {
   pqWeb = prompt('Do you love web development? (y/n) or (yes/no)');
   pqWeb.toLowerCase();
@@ -59,6 +68,7 @@ function initPqWeb() {
   }
 }
 
+//second question in mini game
 function initPqGamer() {
   pqGamer = prompt('Are you a gamer? (y/n) or (yes/no)');
   pqGamer.toLowerCase();
@@ -77,6 +87,7 @@ function initPqGamer() {
   }
 }
 
+//third question in mini game
 function initPqOutdoor() {
   pqOutdoor = prompt('Do you hate outdoor activities? (y/n) or (yes/no)');
   pqOutdoor.toLowerCase();
@@ -95,6 +106,7 @@ function initPqOutdoor() {
   }
 }
 
+//fourth question in mini game
 function initPqPokemon() {
   pqPokemon = prompt('Do you play Pokemon GO? (y/n) or (yes/no)');
   pqPokemon.toLowerCase();
@@ -113,6 +125,7 @@ function initPqPokemon() {
   }
 }
 
+//fifth question in mini game
 function initPqIntrovert() {
   pqIntrovert = prompt('Are you an introvert? (y/n) or (yes/no)');
   pqIntrovert.toLowerCase();
@@ -131,6 +144,7 @@ function initPqIntrovert() {
   }
 }
 
+//result is generated here
 function result() {
   var displayScore = score / maxScore * 100;
   var scoreText;
@@ -163,6 +177,7 @@ function result() {
   scoreDesc.innerHTML = scoreText;
 }
 
+//if user choose not to play the matching game.
 function endGame() {
   scoreResult.innerHTML = '???'
   scoreDesc.innerHTML = 'You chose not to play.'
