@@ -1,5 +1,6 @@
 body {
   background-color: #f7f7c7;
+  font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -10,6 +11,15 @@ main {
 article {
   display: inline-block;
   border: 1px solid black;
+}
+
+.robo {
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.title {
+  font-weight: bold;
 }
 
 .lab-title {
@@ -29,40 +39,78 @@ article {
   color: #153c7a;
 }
 
-.bio-section {
-  text-align: left;
-  margin: 4em;
+.section-style {
+  text-align: center;
+  margin: -1.5em auto 2em auto
 }
 
 .bio-content {
   background-color: #333333;
   color: white;
-  padding: 2em;
+  padding: 4em;
+  text-align: left;
+}
+
+.bio-content>li:nth-last-child(1), .bio-content>li:nth-last-child(2) {
+  margin-top: 1em;
 }
 
 .promptResult {
   padding: 2em;
   margin-top: -2em;
+  margin-bottom: 2em;
 }
 
 #scoreResult {
   font-size: 10em;
   font-weight: bold;
   color: orange;
+  margin-top: -2rem;
 }
 
+/* lab03 */
+.horiRule {
+  color: black;
+}
+
+.top-ten-title {
+  padding: 1em;
+  margin: 0 auto 0 auto;
+  border: 2px dotted grey;
+}
+
+.top-ten-list {
+  text-align: left;
+  list-style-position: inside;
+  margin: 0 auto 0 auto;
+  padding: 2em;
+}
+
+.top-ten-list>li {
+  margin-bottom: 0.5em;
+}
+
+.bg-grey {
+  background-color: #e6e6b3;
+}
 
 @media (min-width: 601px) {
   article {
-    width: 80%;
+    width: 60%;
   }
   .wel-user {
     padding: 1em;
+  }
+  .section-style {
+    max-width: 80%;
   }
 }
 
 @media (max-width: 600px) {
   article {
     width: 95%;
+  }
+  .section-style {
+    max-width: 80%;
   }
 }

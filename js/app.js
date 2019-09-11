@@ -10,14 +10,17 @@ var scoreDesc = document.getElementById('scoreDesc');
 var score = 0;
 var maxScore = 7;
 
+console.log(usr);
+
 //if no name is given, default to USER.
-if(usr == null) {
+if(usr === '') {
   userName.innerText = 'USER';
 } else {
   userName.innerText = usr.toUpperCase();
 }
 
 //mini game prompt
+//var pqMatch;
 var pqMatch = confirm('Would you like to play a quick guessing game about me?');
 if(pqMatch){
   //If yes, then question 1 starts.
@@ -146,7 +149,7 @@ if(pqMatch){
   var qSixWin = false;
   console.log(qSixAnswer);
   do {
-    var qSix = prompt('Guess a number between 1 ~ 10.  You have ' + qSixChances + ' chances left');
+    var qSix = prompt('Guess a number that I am thinking of between 1 ~ 10.  You have ' + qSixChances + ' chances left');
     console.log('you picked ' + qSix);
     var qSixInteger = parseInt(qSix, 10);
     switch(true) {
@@ -167,7 +170,7 @@ if(pqMatch){
       qSixChances -= 1;
       break;
     case qSixInteger === qSixAnswer:
-      alert('YOU GOT IT! NICE!');
+      alert('YOU GOT IT! NICE! Glad we think alike!');
       score += 1;
       qSixWin = true;
       console.log('your current score: ' + score);
@@ -188,12 +191,13 @@ if(pqMatch){
   var qSevenWin = false;
   do {
     var qSevenQuestion = prompt('Multiple Correct Answers (pick one):\nWhich of the following is a part of web development?\n1. HTML\n2. Javascript\n3. CSS\n4. Baseball Bat\n5. Your Favorite blanket\nYou have ' + qSevenChances + ' chances left.');
-    var qSevenQuestion = qSevenQuestion.toLocaleLowerCase();
+    qSevenQuestion = qSevenQuestion.toLocaleLowerCase();
     for(var i=0; i < qSevenAnswers.length; i++){
       if(qSevenQuestion === qSevenAnswers[i]){
         alert('your answer ' + qSevenQuestion + ' is correct!');
         score += 1;
         qSevenWin = true;
+        console.log('your answer ' + qSevenQuestion + ' is correct!');
         console.log('your current score: ' + score);
       }
     }
@@ -204,6 +208,10 @@ if(pqMatch){
 
   } while (qSevenChances > 0 && !qSevenWin);
 
+  if(qSevenChances === 0 || qSevenWin) {
+    alert('Here are all the correct answers!\n' + qSevenAnswers[0] + ', ' + qSevenAnswers[1] + ', ' + qSevenAnswers[2] + '!');
+  }
+
   //result
   var displayScore = score / maxScore * 100;
   displayScore = Math.floor(displayScore);
@@ -212,22 +220,22 @@ if(pqMatch){
   scoreResult.innerHTML = displayScore + '%';
   switch(true) {
   case displayScore === 100:
-    scoreText = 'Yay, good thing you are sane!';
+    scoreText = 'Yay, glad to meet you!';
     break;
   case displayScore >= 80:
-    scoreText = 'You thought mouse can\'t swim...right?';
+    scoreText = 'Nice! Thanks for taking your time.';
     break;
   case displayScore >= 60:
-    scoreText = 'I think you just made a few mistakes.';
+    scoreText = 'No worries, still above 50%';
     break;
   case displayScore >= 40:
-    scoreText = 'Ok, now you are just messing with me.';
+    scoreText = 'Nice try!';
     break;
   case displayScore >= 20:
-    scoreText = '...why?';
+    scoreText = '....oy';
     break;
   case displayScore < 20:
-    scoreText = 'You are probably from another world.';
+    scoreText = 'We are probably from different worlds.';
     break;
   default:
     scoreText = 'Undefined score. Crazy...';
@@ -235,6 +243,8 @@ if(pqMatch){
   }
   scoreDesc.innerHTML = scoreText + '<br>';
   scoreDesc.innerHTML += scoreScore;
+  console.log('Your total score (%): ' + displayScore );
+  console.log(scoreScore);
 
 } else {
   scoreResult.innerHTML = '???';
