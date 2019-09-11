@@ -20,7 +20,6 @@ if(usr === '') {
 }
 
 //mini game prompt
-//var pqMatch;
 var pqMatch = confirm('Would you like to play a quick guessing game about me?');
 if(pqMatch){
   //If yes, then question 1 starts.
