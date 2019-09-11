@@ -5,8 +5,8 @@ var usr = prompt('Hello! What is your name?');
 var userName = document.getElementById('userName');
 
 //score variables
-var scoreResult = document.getElementById("scoreResult");
-var scoreDesc = document.getElementById("scoreDesc");
+var scoreResult = document.getElementById('scoreResult');
+var scoreDesc = document.getElementById('scoreDesc');
 var score = 0;
 var maxScore = 7;
 
@@ -18,126 +18,126 @@ if(usr == null) {
 }
 
 //mini game prompt
-var pqMatch = confirm('Would you like to play a quick guessing game?');
+var pqMatch = confirm('Would you like to play a quick guessing game about me?');
 if(pqMatch){
   //If yes, then question 1 starts.
-  var pqPigWin = false;
+  var pqOneWin = false;
   do {
-    var pqPig = prompt('Do pigs fly? (y/n) or (yes/no)');
-    switch(pqPig.toLowerCase()) {
-      case 'yes':
-      case 'y':
-        alert('No they don\'t unfortunately.');
-        pqPigWin = true;
-        break;
-      case 'no':
-      case 'n':
-        alert('You are correct! Why would they?');
-        score += 1;
-        pqPigWin = true;
-        break;
-      default:
-        alert('This is not the correct input.');
+    var pqOne = prompt('Do I have prior web development experience? (y/n) or (yes/no)');
+    switch(pqOne.toLowerCase()) {
+    case 'yes':
+    case 'y':
+      alert('Yes I does!');
+      score += 1;
+      pqOneWin = true;
+      break;
+    case 'no':
+    case 'n':
+      alert('Sorry, but I do.');
+      pqOneWin = true;
+      break;
+    default:
+      alert('This is not the correct input, try again.');
     }
-  } while (!pqPigWin);
+  } while (!pqOneWin);
 
-  console.log('your answer to first question is ' + pqPig);
+  console.log('your answer to first question is ' + pqOne);
   console.log('your current score: ' + score);
-  
+
   //question 2
-  var pqMouseWin = false;
+  var pqTwoWin = false;
   do {
-    var pqMouse = prompt('can a mouse swim? (y/n) or (yes/no)');
-    switch(pqMouse.toLowerCase()) {
-      case 'yes':
-      case 'y':
-        alert('You are right! Double check your toilet before you sit on it.');
-        score += 1;
-        pqMouseWin = true;
-        break;
-      case 'no':
-      case 'n':
-        alert('Sorry, it can indeed!');
-        pqMouseWin = true;
-        break;
-      default:
-        alert('this is not the correct input.');
+    var pqTwo = prompt('Am I an Animator? (y/n) or (yes/no)');
+    switch(pqTwo.toLowerCase()) {
+    case 'yes':
+    case 'y':
+      alert('Yep!  I have a MFA in 3D Character Animation');
+      score += 1;
+      pqTwoWin = true;
+      break;
+    case 'no':
+    case 'n':
+      alert('BUT I am :D');
+      pqTwoWin = true;
+      break;
+    default:
+      alert('this is not the correct input.');
     }
-  } while (!pqMouseWin);
+  } while (!pqTwoWin);
 
-  console.log('your answer to second question is ' + pqMouse);
+  console.log('your answer to second question is ' + pqTwo);
   console.log('your current score: ' + score);
 
-  //question 3 
-  var pqBirdWin = false;
+  //question 3
+  var pqThreeWin = false;
   do {
-    var pqBird = prompt('Do horses eat meat? (y/n) or (yes/no)');
-    switch(pqBird.toLowerCase()) {
-      case 'yes':
-      case 'y':
-        alert('Negative, maybe a hellspawn?');
-        pqBirdWin = true;
-        break;
-      case 'no':
-      case 'n':
-        score += 1;
-        alert('Correct! Imagine they start eating their own kind...');
-        pqBirdWin = true;
-        break;
-      default:
-        alert('this is not the correct input.');
+    var pqThree = prompt('I used to be a world class Bartender. (y/n) or (yes/no)');
+    switch(pqThree.toLowerCase()) {
+    case 'yes':
+    case 'y':
+      alert('Nah, alcohol and I are not good friends.');
+      pqThreeWin = true;
+      break;
+    case 'no':
+    case 'n':
+      score += 1;
+      alert('I suppose I wouldn\'nt be here if I am world class...');
+      pqThreeWin = true;
+      break;
+    default:
+      alert('this is not the correct input.');
     }
-  } while (!pqBirdWin);
+  } while (!pqThreeWin);
 
-  console.log('your answer to third question is ' + pqBird);
+  console.log('your answer to third question is ' + pqThree);
   console.log('your current score: ' + score);
 
   //question 4
-  var pqBearWin = false;
+  var pqFourWin = false;
   do {
-    var pqBear = prompt('Can a bear kill you? (y/n) or (yes/no)');
-    switch(pqBear.toLowerCase()) {
-      case 'yes':
-      case 'y':
-        alert('Definitely! Unless are already dead.');
-        score += 1;
-        pqBearWin = true;
-        break;
-      case 'no':
-      case 'n':
-        alert('I am pretty sure it can.  Sorry~ my quiz my rules');
-        pqBearWin = true;
-        break;
-      default:
-        alert('this is not the correct input.');
+    var pqFour = prompt('I strive to become a full stack javascript developer. (y/n) or (yes/no)');
+    switch(pqFour.toLowerCase()) {
+    case 'yes':
+    case 'y':
+      alert('Indeed!');
+      score += 1;
+      pqFourWin = true;
+      break;
+    case 'no':
+    case 'n':
+      alert('I suppose I can try oth...NOPE!');
+      pqFourWin = true;
+      break;
+    default:
+      alert('this is not the correct input.');
     }
-  } while (!pqBearWin);
+  } while (!pqFourWin);
 
-  console.log('your answer to fourth question is ' + pqBear);
+  console.log('your answer to fourth question is ' + pqFour);
   console.log('your current score: ' + score);
 
   //question 5
-  var pqDogWin = false;
+  var pqFiveWin = false;
   do {
-    var pqDog = prompt('Can dogs become a web developer? (y/n) or (yes/no)');
-    switch(pqDog.toLowerCase()) {
-      case 'yes':
-      case 'y':
-        alert('Maybe in a few hundred years? But NO!');
-        pqDogWin = true;
-        break;
-      case 'no':
-      case 'n':
-        alert('Good thing they can\'t, or else we are screwed');
-        score += 1;
-        pqDogWin = true;
-        break;
-      default:
-        alert('this is not the correct input.');
+    var pqFive = prompt('Do I hate video games? (y/n) or (yes/no)');
+    switch(pqFive.toLowerCase()) {
+    case 'yes':
+    case 'y':
+      alert('That would be a terrible reality.');
+      pqFiveWin = true;
+      break;
+    case 'no':
+    case 'n':
+      alert('I am a game nerd.');
+      score += 1;
+      pqFiveWin = true;
+      break;
+    default:
+      alert('this is not the correct input.');
     }
-  } while (!pqDogWin);
+  } while (!pqFiveWin);
 
-  console.log('your answer to fifth question is ' + pqDog);
+  console.log('your answer to fifth question is ' + pqFive);
   console.log('your current score: ' + score);
 
   //question 6
@@ -150,37 +150,37 @@ if(pqMatch){
     console.log('you picked ' + qSix);
     var qSixInteger = parseInt(qSix, 10);
     switch(true) {
-      case qSixInteger > qSixAnswer && qSixInteger > qSixAnswer + 2:
-        alert('it\'s too high!  Lower!');
-        qSixChances -= 1;
-        break;
-      case qSixInteger > qSixAnswer && qSixInteger <= qSixAnswer + 2:
-        alert('you are so close, but still too high!');
-        qSixChances -= 1;
-        break;
-      case qSixInteger < qSixAnswer && qSixInteger < qSixAnswer - 2:
-        alert('this is too low! Higher!');
-        qSixChances -= 1;
-        break;
-      case qSixInteger < qSixAnswer && qSixInteger >= qSixAnswer - 2:
-        alert('so close! a little too low');
-        qSixChances -= 1;
-        break;
-      case qSixInteger === qSixAnswer:
-        alert('YOU GOT IT! NICE!');
-        score += 1;
-        qSixWin = true;
-        console.log('your current score: ' + score);
-        break;
-      default:
-        alert('this is not a valid input, try again!');
-        break;
+    case qSixInteger > qSixAnswer && qSixInteger > qSixAnswer + 2:
+      alert('it\'s too high!  Lower!');
+      qSixChances -= 1;
+      break;
+    case qSixInteger > qSixAnswer && qSixInteger <= qSixAnswer + 2:
+      alert('you are so close, but still too high!');
+      qSixChances -= 1;
+      break;
+    case qSixInteger < qSixAnswer && qSixInteger < qSixAnswer - 2:
+      alert('this is too low! Higher!');
+      qSixChances -= 1;
+      break;
+    case qSixInteger < qSixAnswer && qSixInteger >= qSixAnswer - 2:
+      alert('so close! a little too low');
+      qSixChances -= 1;
+      break;
+    case qSixInteger === qSixAnswer:
+      alert('YOU GOT IT! NICE!');
+      score += 1;
+      qSixWin = true;
+      console.log('your current score: ' + score);
+      break;
+    default:
+      alert('this is not a valid input, try again!');
+      break;
     }
   } while (qSixChances > 0 && !qSixWin);
 
   if(qSixChances === 0 && !qSixWin) {
-    alert('Sorry, you ran out of chances...moving on.')
-  } 
+    alert('Sorry, you ran out of chances...moving on.');
+  }
 
   //question 7
   var qSevenChances = 6;
@@ -198,7 +198,7 @@ if(pqMatch){
       }
     }
     if(!qSevenWin){
-      alert('Nope, try again~')
+      alert('Nope, try again~');
       qSevenChances -= 1;
     }
 
@@ -211,27 +211,27 @@ if(pqMatch){
   var scoreScore = 'your score is ' + score + ' / ' + maxScore;
   scoreResult.innerHTML = displayScore + '%';
   switch(true) {
-    case displayScore === 100:
-      scoreText = 'Yay, good thing you are sane!';
-      break;
-    case displayScore >= 80:
-      scoreText = 'You thought mouse can\'t swim...right?';
-      break;
-    case displayScore >= 60:
-      scoreText = 'I think you just made a few mistakes.';
-      break;
-    case displayScore >= 40:
-      scoreText = 'Ok, now you are just messing with me.';
-      break;
-    case displayScore >= 20:
-      scoreText = '...why?';
-      break;
-    case displayScore < 20:
-      scoreText = 'You are probably from another world.';
-      break;
-    default:
-      scoreText = 'Undefined score. Crazy...';
-      break;
+  case displayScore === 100:
+    scoreText = 'Yay, good thing you are sane!';
+    break;
+  case displayScore >= 80:
+    scoreText = 'You thought mouse can\'t swim...right?';
+    break;
+  case displayScore >= 60:
+    scoreText = 'I think you just made a few mistakes.';
+    break;
+  case displayScore >= 40:
+    scoreText = 'Ok, now you are just messing with me.';
+    break;
+  case displayScore >= 20:
+    scoreText = '...why?';
+    break;
+  case displayScore < 20:
+    scoreText = 'You are probably from another world.';
+    break;
+  default:
+    scoreText = 'Undefined score. Crazy...';
+    break;
   }
   scoreDesc.innerHTML = scoreText + '<br>';
   scoreDesc.innerHTML += scoreScore;
