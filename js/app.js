@@ -56,7 +56,7 @@ function initPqWeb() {
 
   if(pqWeb === 'yes' || pqWeb === 'y' || pqWeb === 'no' || pqWeb === 'n'){
     if(pqWeb === 'yes' || pqWeb === 'y'){
-      score = score + 1;
+      score += 1;
     } 
     alertTxt();
     initPqGamer();
@@ -75,7 +75,7 @@ function initPqGamer() {
 
   if(pqGamer === 'yes' || pqGamer === 'y' || pqGamer === 'no' || pqGamer === 'n'){
     if(pqGamer === 'yes' || pqGamer === 'y'){
-      score = score + 1;
+      score += 1;
     }
     alertTxt(); 
     initPqOutdoor();
@@ -94,7 +94,7 @@ function initPqOutdoor() {
 
   if(pqOutdoor === 'yes' || pqOutdoor === 'y' || pqOutdoor === 'no' || pqOutdoor === 'n'){
     if(pqOutdoor === 'no' || pqOutdoor === 'n'){
-      score = score + 1;
+      score += 1;
     }
     alertTxt();
     initPqPokemon();
@@ -113,7 +113,7 @@ function initPqPokemon() {
 
   if(pqPokemon === 'yes' || pqPokemon === 'y' || pqPokemon === 'no' || pqPokemon === 'n'){
     if(pqPokemon === 'yes' || pqPokemon === 'y'){
-      score = score + 1;
+      score += 1;
     } 
     alertTxt();
     initPqIntrovert();
@@ -132,7 +132,7 @@ function initPqIntrovert() {
 
   if(pqIntrovert === 'yes' || pqIntrovert === 'y' || pqIntrovert === 'no' || pqIntrovert === 'n'){
     if(pqIntrovert === 'yes' || pqIntrovert === 'y'){
-      score = score + 1;
+      score += 1;
     } 
     alertTxt();
     result();
