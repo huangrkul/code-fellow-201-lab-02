@@ -13,7 +13,7 @@ var maxScore = 7;
 console.log(usr);
 
 //if no name is given, default to USER.
-if(usr === '') {
+if(usr === '' || usr === null) {
   userName.innerText = 'USER';
 } else {
   userName.innerText = usr.toUpperCase();
