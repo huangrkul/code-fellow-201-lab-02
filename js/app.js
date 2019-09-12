@@ -56,7 +56,7 @@ if(pqMatch){
         switch(pqArray[0].toLowerCase()) {
         case 'yes':
         case 'y':
-          alert('Yes I does!');
+          alert('Yes I do!');
           score += 1;
           pqOneWin = true;
           break;
