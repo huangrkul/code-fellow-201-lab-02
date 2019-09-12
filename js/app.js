@@ -209,7 +209,8 @@ if(pqMatch){
   } while (qSixChances > 0 && !qSixWin);
 
   if(qSixChances === 0 && !qSixWin) {
-    alert('Sorry, you ran out of chances...moving on.');
+    alert('Sorry, you ran out of chances...sorry :/ \nthe correct number is ' + qSixAnswer);
+    console.log('Sorry, you ran out of chances...sorry :/ \nthe correct number is ' + qSixAnswer);
   }
 
   //question 7
@@ -217,8 +218,13 @@ if(pqMatch){
   var qSevenAnswers = ['html','javascript','css'];
   var qSevenWin = false;
   do {
-    var qSevenQuestion = prompt('Multiple Correct Answers (pick one):\nWhich of the following is a part of web development?\n1. HTML\n2. Javascript\n3. CSS\n4. Baseball Bat\n5. Your Favorite blanket\nYou have ' + qSevenChances + ' chances left.');
-    qSevenQuestion = qSevenQuestion.toLocaleLowerCase();
+    var qSevenQuestion = prompt('Multiple Correct Answers (pick one and type out entire answer, exclude the number.):\nWhich of the following is a part of web development?\n1. HTML\n2. Javascript\n3. CSS\n4. Baseball Bat\n5. Your Favorite blanket\nYou have ' + qSevenChances + ' chances left.');
+    if(qSevenQuestion === null) {
+      alert('you opted out, that count as losing the game. Sorry!');
+      qSevenWin = true;
+    } else {
+      qSevenQuestion = qSevenQuestion.toLocaleLowerCase();
+    }
     for(var k=0; k < qSevenAnswers.length; k++){
       if(qSevenQuestion === qSevenAnswers[k]){
         alert('your answer ' + qSevenQuestion + ' is correct!');
