@@ -6,3 +6,4 @@
  - User score (also in %) have been implemented and displayed when the game ends.
  - Random number generated for question 6's answer (stretch goal).
  - Added **for loop** that controls the flow of question 1 - 5 (stretch goal).
+ navigator: Will Huang driver: Wyatt Grodzins
