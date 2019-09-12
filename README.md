@@ -1,5 +1,5 @@
 # code-fellow-201-lab-02
-##Features added since lab 02:
+## Features added since lab 02:
  - Un-ordered list of work experience and education summary.
  - Added ordered top ten list to the bottom of the content.
  - Added 6th and 7th question to the guessing game as instructed.
