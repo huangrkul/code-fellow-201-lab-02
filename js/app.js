@@ -24,12 +24,10 @@ function pqOneQuestion(){
   var pqOneWin = false;
   do {
     var pqOne = prompt('Do I have prior web development experience? (y/n) or (yes/no)');
-    if(pqOne === null){
+    if(pqOne === null) {
       pqOne = '';
-    } else {
-      pqOne.toLowerCase();
     }
-    switch(pqOne) {
+    switch(pqOne.toLowerCase()) {
     case 'yes':
     case 'y':
       alert('Yes I do!');
@@ -57,12 +55,10 @@ function pqTwoQuestion(){
   var pqTwoWin = false;
   do {
     var pqTwo = prompt('Am I an Animator? (y/n) or (yes/no)');
-    if(pqTwo === null){
+    if(pqTwo === null) {
       pqTwo = '';
-    } else {
-      pqTwo.toLowerCase();
     }
-    switch(pqTwo) {
+    switch(pqTwo.toLowerCase()) {
     case 'yes':
     case 'y':
       alert('Yep!  I have a MFA in 3D Character Animation');
@@ -90,12 +86,10 @@ function pqThreeQuestion(){
   var pqThreeWin = false;
   do {
     var pqThree = prompt('I used to be a world class Bartender. (y/n) or (yes/no)');
-    if(pqThree === null){
+    if(pqThree === null) {
       pqThree = '';
-    } else {
-      pqThree.toLowerCase();
     }
-    switch(pqThree) {
+    switch(pqThree.toLowerCase()) {
     case 'yes':
     case 'y':
       alert('Nah, alcohol and I are not good friends.');
@@ -123,12 +117,10 @@ function pqFourQuestion(){
   var pqFourWin = false;
   do {
     var pqFour = prompt('I strive to become a full stack javascript developer. (y/n) or (yes/no)');
-    if(pqFour === null){
+    if(pqFour === null) {
       pqFour = '';
-    } else {
-      pqFour.toLowerCase();
     }
-    switch(pqFour) {
+    switch(pqFour.toLowerCase()) {
     case 'yes':
     case 'y':
       alert('Indeed!');
@@ -156,12 +148,10 @@ function pqFiveQuestion(){
   var pqFiveWin = false;
   do {
     var pqFive = prompt('Do I hate video games? (y/n) or (yes/no)');
-    if(pqFive === null){
+    if(pqFive === null) {
       pqFive = '';
-    } else {
-      pqFive.toLowerCase();
     }
-    switch(pqFive) {
+    switch(pqFive.toLowerCase()) {
     case 'yes':
     case 'y':
       alert('That would be a terrible reality.');
