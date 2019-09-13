@@ -19,6 +19,7 @@ if(usr === '' || usr === null) {
   userName.innerText = usr.toUpperCase();
 }
 
+//question 1
 function pqOneQuestion(){
   var pqOneWin = false;
   do {
@@ -39,11 +40,14 @@ function pqOneQuestion(){
       alert('This is not the correct input, try again.');
     }
   } while (!pqOneWin);
-if(pqOneWin){pqTwoQuestion()}
+  if(pqOneWin){
+    pqTwoQuestion();
+  }
   console.log('your answer to first question is ' + pqOne);
   console.log('your current score: ' + score);
-
 }
+
+//question 2
 function pqTwoQuestion(){
   var pqTwoWin = false;
   do {
@@ -64,12 +68,14 @@ function pqTwoQuestion(){
       alert('this is not the correct input.');
     }
   } while (!pqTwoWin);
-  if(pqTwoWin){pqThreeQuestion()}
-
+  if(pqTwoWin){
+    pqThreeQuestion();
+  }
   console.log('your answer to second question is ' + pqTwo);
   console.log('your current score: ' + score);
-
 }
+
+//question 3
 function pqThreeQuestion(){
   var pqThreeWin = false;
   do {
@@ -90,11 +96,14 @@ function pqThreeQuestion(){
       alert('this is not the correct input.');
     }
   } while (!pqThreeWin);
-  if(pqThreeWin){pqFourQuestion()}
+  if(pqThreeWin){
+    pqFourQuestion();
+  }
   console.log('your answer to third question is ' + pqThree);
   console.log('your current score: ' + score);
-
 }
+
+//question 4
 function pqFourQuestion(){
   var pqFourWin = false;
   do {
@@ -115,11 +124,14 @@ function pqFourQuestion(){
       alert('this is not the correct input.');
     }
   } while (!pqFourWin);
-  if(pqFourWin){pqFiveQuestion()}
+  if(pqFourWin){
+    pqFiveQuestion();
+  }
   console.log('your answer to fourth question is ' + pqFour);
   console.log('your current score: ' + score);
-
 }
+
+//question 5
 function pqFiveQuestion(){
   var pqFiveWin = false;
   do {
@@ -140,11 +152,14 @@ function pqFiveQuestion(){
       alert('this is not the correct input.');
     }
   } while (!pqFiveWin);
-  if(pqFiveWin){pqSixQuestion()}
+  if(pqFiveWin){
+    pqSixQuestion();
+  }
   console.log('your answer to fifth question is ' + pqFive);
   console.log('your current score: ' + score);
-
 }
+
+//question 6
 function pqSixQuestion(){
   var qSixChances = 4;
   var qSixAnswer = Math.floor(Math.random() * 10) + 1;
@@ -182,14 +197,17 @@ function pqSixQuestion(){
       break;
     }
   } while (qSixChances > 0 && !qSixWin);
-  if(qSixWin){pqSevenQuestion()}
+  if(qSixWin){
+    pqSevenQuestion();
+  }
 
   if(qSixChances === 0 && !qSixWin) {
     alert('Sorry, you ran out of chances...sorry :/ \nthe correct number is ' + qSixAnswer);
     console.log('Sorry, you ran out of chances...sorry :/ \nthe correct number is ' + qSixAnswer);
   }
-
 }
+
+//question 7
 function pqSevenQuestion(){
   var qSevenChances = 6;
   var qSevenAnswers = ['html','javascript','css'];
@@ -220,10 +238,11 @@ function pqSevenQuestion(){
 
   if(qSevenChances === 0 || qSevenWin) {
     alert('Here are all the correct answers!\n' + qSevenAnswers[0] + ', ' + qSevenAnswers[1] + ', ' + qSevenAnswers[2] + '!');
-  pqResult();
+    pqResult();
   }
-
 }
+
+//result
 function pqResult(){
   var displayScore = score / maxScore * 100;
   displayScore = Math.floor(displayScore);
@@ -259,11 +278,12 @@ function pqResult(){
   console.log(scoreScore);
 
 }
+
 //mini game prompt
 var pqMatch = confirm('Would you like to play a quick guessing game about me?');
 if(pqMatch){
+  //begin guessing game
   pqOneQuestion();
- 
 } else {
   scoreResult.innerHTML = '???';
   scoreDesc.innerHTML = 'You chose not to play.';
