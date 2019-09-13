@@ -204,6 +204,7 @@ function pqSixQuestion(){
   if(qSixChances === 0 && !qSixWin) {
     alert('Sorry, you ran out of chances...sorry :/ \nthe correct number is ' + qSixAnswer);
     console.log('Sorry, you ran out of chances...sorry :/ \nthe correct number is ' + qSixAnswer);
+    pqSevenQuestion();
   }
 }
 
