@@ -24,7 +24,12 @@ function pqOneQuestion(){
   var pqOneWin = false;
   do {
     var pqOne = prompt('Do I have prior web development experience? (y/n) or (yes/no)');
-    switch(pqOne.toLowerCase()) {
+    if(pqOne === null){
+      pqOne = '';
+    } else {
+      pqOne.toLowerCase();
+    }
+    switch(pqOne) {
     case 'yes':
     case 'y':
       alert('Yes I do!');
@@ -52,7 +57,12 @@ function pqTwoQuestion(){
   var pqTwoWin = false;
   do {
     var pqTwo = prompt('Am I an Animator? (y/n) or (yes/no)');
-    switch(pqTwo.toLowerCase()) {
+    if(pqTwo === null){
+      pqTwo = '';
+    } else {
+      pqTwo.toLowerCase();
+    }
+    switch(pqTwo) {
     case 'yes':
     case 'y':
       alert('Yep!  I have a MFA in 3D Character Animation');
@@ -80,7 +90,12 @@ function pqThreeQuestion(){
   var pqThreeWin = false;
   do {
     var pqThree = prompt('I used to be a world class Bartender. (y/n) or (yes/no)');
-    switch(pqThree.toLowerCase()) {
+    if(pqThree === null){
+      pqThree = '';
+    } else {
+      pqThree.toLowerCase();
+    }
+    switch(pqThree) {
     case 'yes':
     case 'y':
       alert('Nah, alcohol and I are not good friends.');
@@ -108,7 +123,12 @@ function pqFourQuestion(){
   var pqFourWin = false;
   do {
     var pqFour = prompt('I strive to become a full stack javascript developer. (y/n) or (yes/no)');
-    switch(pqFour.toLowerCase()) {
+    if(pqFour === null){
+      pqFour = '';
+    } else {
+      pqFour.toLowerCase();
+    }
+    switch(pqFour) {
     case 'yes':
     case 'y':
       alert('Indeed!');
@@ -136,7 +156,12 @@ function pqFiveQuestion(){
   var pqFiveWin = false;
   do {
     var pqFive = prompt('Do I hate video games? (y/n) or (yes/no)');
-    switch(pqFive.toLowerCase()) {
+    if(pqFive === null){
+      pqFive = '';
+    } else {
+      pqFive.toLowerCase();
+    }
+    switch(pqFive) {
     case 'yes':
     case 'y':
       alert('That would be a terrible reality.');
@@ -190,6 +215,7 @@ function pqSixQuestion(){
       alert('YOU GOT IT! NICE! Glad we think alike!');
       score += 1;
       qSixWin = true;
+      console.log('your answer to question 6 is ' + qSix);
       console.log('your current score: ' + score);
       break;
     default:
@@ -216,8 +242,7 @@ function pqSevenQuestion(){
   do {
     var qSevenQuestion = prompt('Multiple Correct Answers (please type out entire answer):\nWhich of the following is a part of web development?\nHTML\nJavascript\nCSS\nBaseball Bat\nYou have ' + qSevenChances + ' chances left.');
     if(qSevenQuestion === null) {
-      alert('you opted out, that count as losing the game. Sorry!');
-      qSevenWin = true;
+      qSevenQuestion = '';
     } else {
       qSevenQuestion = qSevenQuestion.toLocaleLowerCase();
     }
