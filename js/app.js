@@ -214,7 +214,7 @@ function pqSevenQuestion(){
   var qSevenAnswers = ['html','javascript','css'];
   var qSevenWin = false;
   do {
-    var qSevenQuestion = prompt('Multiple Correct Answers (pick one and type out entire answer, exclude the number.):\nWhich of the following is a part of web development?\n1. HTML\n2. Javascript\n3. CSS\n4. Baseball Bat\n5. Your Favorite blanket\nYou have ' + qSevenChances + ' chances left.');
+    var qSevenQuestion = prompt('Multiple Correct Answers (please type out entire answer):\nWhich of the following is a part of web development?\nHTML\nJavascript\nCSS\nBaseball Bat\nYou have ' + qSevenChances + ' chances left.');
     if(qSevenQuestion === null) {
       alert('you opted out, that count as losing the game. Sorry!');
       qSevenWin = true;
