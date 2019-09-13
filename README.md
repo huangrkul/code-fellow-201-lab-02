@@ -8,6 +8,6 @@
  - Added **for loop** that controls the flow of question 1 - 5 (stretch goal).
 
 ### Features added in lab 04:
- Navigator: Will Huang 
- Driver: Wyatt Grodzins
+ Navigator: Will Huang   
+ Driver: Wyatt Grodzins  
  - Converted each question into individual function through pairing process.
