@@ -4,13 +4,21 @@
 var usr = prompt('Hello! What is your name?');
 var userName = document.getElementById('userName');
 
+//question 1-5 variables
+var pqOne;
+var pqTwo;
+var pqThree;
+var pqFour;
+var pqFive;
+var pqSix;
+var pqSeven;
+
 //score variables
 var scoreResult = document.getElementById('scoreResult');
 var scoreDesc = document.getElementById('scoreDesc');
 var score = 0;
 var maxScore = 7;
 
-console.log(usr);
 
 //if no name is given, default to USER.
 if(usr === '' || usr === null) {
@@ -19,11 +27,12 @@ if(usr === '' || usr === null) {
   userName.innerText = usr.toUpperCase();
 }
 
+console.log('Welcome! ' + usr);
 //question 1
 function pqOneQuestion(){
   var pqOneWin = false;
   do {
-    var pqOne = prompt('Do I have prior web development experience? (y/n) or (yes/no)');
+    pqOne = prompt('Do I have prior web development experience? (y/n) or (yes/no)');
     if(pqOne === null) {
       pqOne = '';
     }
@@ -33,11 +42,13 @@ function pqOneQuestion(){
       alert('Yes I do!');
       score += 1;
       pqOneWin = true;
+      console.log('Q1. your current score: ' + score);
       break;
     case 'no':
     case 'n':
       alert('Sorry, but I do.');
       pqOneWin = true;
+      console.log('Q1. your current score: ' + score);
       break;
     default:
       alert('This is not the correct input, try again.');
@@ -46,15 +57,13 @@ function pqOneQuestion(){
   if(pqOneWin){
     pqTwoQuestion();
   }
-  console.log('your answer to first question is ' + pqOne);
-  console.log('your current score: ' + score);
 }
 
 //question 2
 function pqTwoQuestion(){
   var pqTwoWin = false;
   do {
-    var pqTwo = prompt('Am I an Animator? (y/n) or (yes/no)');
+    pqTwo = prompt('Am I an Animator? (y/n) or (yes/no)');
     if(pqTwo === null) {
       pqTwo = '';
     }
@@ -64,11 +73,13 @@ function pqTwoQuestion(){
       alert('Yep!  I have a MFA in 3D Character Animation');
       score += 1;
       pqTwoWin = true;
+      console.log('Q2. your current score: ' + score);
       break;
     case 'no':
     case 'n':
       alert('BUT I am :D');
       pqTwoWin = true;
+      console.log('Q2. your current score: ' + score);
       break;
     default:
       alert('this is not the correct input.');
@@ -77,15 +88,13 @@ function pqTwoQuestion(){
   if(pqTwoWin){
     pqThreeQuestion();
   }
-  console.log('your answer to second question is ' + pqTwo);
-  console.log('your current score: ' + score);
 }
 
 //question 3
 function pqThreeQuestion(){
   var pqThreeWin = false;
   do {
-    var pqThree = prompt('I used to be a world class Bartender. (y/n) or (yes/no)');
+    pqThree = prompt('I used to be a world class Bartender. (y/n) or (yes/no)');
     if(pqThree === null) {
       pqThree = '';
     }
@@ -94,12 +103,14 @@ function pqThreeQuestion(){
     case 'y':
       alert('Nah, alcohol and I are not good friends.');
       pqThreeWin = true;
+      console.log('Q3. your current score: ' + score);
       break;
     case 'no':
     case 'n':
       score += 1;
       alert('I suppose I wouldn\'nt be here if I am world class...');
       pqThreeWin = true;
+      console.log('Q3. your current score: ' + score);
       break;
     default:
       alert('this is not the correct input.');
@@ -108,15 +119,13 @@ function pqThreeQuestion(){
   if(pqThreeWin){
     pqFourQuestion();
   }
-  console.log('your answer to third question is ' + pqThree);
-  console.log('your current score: ' + score);
 }
 
 //question 4
 function pqFourQuestion(){
   var pqFourWin = false;
   do {
-    var pqFour = prompt('I strive to become a full stack javascript developer. (y/n) or (yes/no)');
+    pqFour = prompt('I strive to become a full stack javascript developer. (y/n) or (yes/no)');
     if(pqFour === null) {
       pqFour = '';
     }
@@ -126,11 +135,13 @@ function pqFourQuestion(){
       alert('Indeed!');
       score += 1;
       pqFourWin = true;
+      console.log('Q4. your current score: ' + score);
       break;
     case 'no':
     case 'n':
       alert('I suppose I can try oth...NOPE!');
       pqFourWin = true;
+      console.log('Q4. your current score: ' + score);
       break;
     default:
       alert('this is not the correct input.');
@@ -139,15 +150,13 @@ function pqFourQuestion(){
   if(pqFourWin){
     pqFiveQuestion();
   }
-  console.log('your answer to fourth question is ' + pqFour);
-  console.log('your current score: ' + score);
 }
 
 //question 5
 function pqFiveQuestion(){
   var pqFiveWin = false;
   do {
-    var pqFive = prompt('Do I hate video games? (y/n) or (yes/no)');
+    pqFive = prompt('Do I hate video games? (y/n) or (yes/no)');
     if(pqFive === null) {
       pqFive = '';
     }
@@ -156,12 +165,14 @@ function pqFiveQuestion(){
     case 'y':
       alert('That would be a terrible reality.');
       pqFiveWin = true;
+      console.log('Q5. your current score: ' + score);
       break;
     case 'no':
     case 'n':
       alert('I am a game nerd.');
       score += 1;
       pqFiveWin = true;
+      console.log('Q5. your current score: ' + score);
       break;
     default:
       alert('this is not the correct input.');
@@ -170,8 +181,6 @@ function pqFiveQuestion(){
   if(pqFiveWin){
     pqSixQuestion();
   }
-  console.log('your answer to fifth question is ' + pqFive);
-  console.log('your current score: ' + score);
 }
 
 //question 6
@@ -179,11 +188,10 @@ function pqSixQuestion(){
   var qSixChances = 4;
   var qSixAnswer = Math.floor(Math.random() * 10) + 1;
   var qSixWin = false;
-  console.log(qSixAnswer);
   do {
-    var qSix = prompt('Guess a number that I am thinking of between 1 ~ 10.  You have ' + qSixChances + ' chances left');
-    console.log('you picked ' + qSix);
-    var qSixInteger = parseInt(qSix, 10);
+    pqSix = prompt('Guess a number that I am thinking of between 1 ~ 10.  You have ' + qSixChances + ' chances left');
+    console.log('Question 6, you picked ' + pqSix);
+    var qSixInteger = parseInt(pqSix, 10);
     switch(true) {
     case qSixInteger > qSixAnswer && qSixInteger > qSixAnswer + 2:
       alert('it\'s too high!  Lower!');
@@ -205,8 +213,7 @@ function pqSixQuestion(){
       alert('YOU GOT IT! NICE! Glad we think alike!');
       score += 1;
       qSixWin = true;
-      console.log('your answer to question 6 is ' + qSix);
-      console.log('your current score: ' + score);
+      console.log('Q6. your current score: ' + score);
       break;
     default:
       alert('this is not a valid input, try again!');
@@ -219,7 +226,7 @@ function pqSixQuestion(){
 
   if(qSixChances === 0 && !qSixWin) {
     alert('Sorry, you ran out of chances...sorry :/ \nthe correct number is ' + qSixAnswer);
-    console.log('Sorry, you ran out of chances...sorry :/ \nthe correct number is ' + qSixAnswer);
+    console.log('Q6. Sorry, you ran out of chances...sorry :/ \nthe correct number is ' + qSixAnswer);
     pqSevenQuestion();
   }
 }
@@ -230,19 +237,19 @@ function pqSevenQuestion(){
   var qSevenAnswers = ['html','javascript','css'];
   var qSevenWin = false;
   do {
-    var qSevenQuestion = prompt('Multiple Correct Answers (please type out entire answer):\nWhich of the following is a part of web development?\nHTML\nJavascript\nCSS\nBaseball Bat\nYou have ' + qSevenChances + ' chances left.');
-    if(qSevenQuestion === null) {
-      qSevenQuestion = '';
+    pqSeven = prompt('Multiple Correct Answers (please type out entire answer):\nWhich of the following is a part of web development?\nHTML\nJavascript\nCSS\nBaseball Bat\nYou have ' + qSevenChances + ' chances left.');
+    if(pqSeven === null) {
+      pqSeven = '';
     } else {
-      qSevenQuestion = qSevenQuestion.toLocaleLowerCase();
+      pqSeven = pqSeven.toLocaleLowerCase();
     }
     for(var i=0; i < qSevenAnswers.length; i++){
-      if(qSevenQuestion === qSevenAnswers[i]){
-        alert('your answer ' + qSevenQuestion + ' is correct!');
+      if(pqSeven === qSevenAnswers[i]){
+        alert('your answer ' + pqSeven + ' is correct!');
         score += 1;
         qSevenWin = true;
-        console.log('your answer ' + qSevenQuestion + ' is correct!');
-        console.log('your current score: ' + score);
+        console.log('your answer ' + pqSeven + ' is correct!');
+        console.log('Q7. your current score: ' + score);
       }
     }
     if(!qSevenWin){
@@ -254,6 +261,7 @@ function pqSevenQuestion(){
 
   if(qSevenChances === 0 || qSevenWin) {
     alert('Here are all the correct answers!\n' + qSevenAnswers[0] + ', ' + qSevenAnswers[1] + ', ' + qSevenAnswers[2] + '!');
+    console.log('Q7. Here are all the correct answers!\n' + qSevenAnswers[0] + ', ' + qSevenAnswers[1] + ', ' + qSevenAnswers[2] + '!');
     pqResult();
   }
 }
@@ -290,6 +298,13 @@ function pqResult(){
   }
   scoreDesc.innerHTML = scoreText + '<br>';
   scoreDesc.innerHTML += scoreScore;
+  console.log('your answer to first question is ' + pqOne);
+  console.log('your answer to second question is ' + pqTwo);
+  console.log('your answer to third question is ' + pqThree);
+  console.log('your answer to fourth question is ' + pqFour);
+  console.log('your answer to fifth question is ' + pqFive);
+  console.log('your answer to sixth question is ' + pqSix);
+  console.log('your answer to seventh question is ' + pqSeven);
   console.log('Your total score (%): ' + displayScore );
   console.log(scoreScore);
 
